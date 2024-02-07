@@ -68,7 +68,7 @@ function addColumns(cityPop){
 // This function handles user events
 function addEvents(){
 
-	$('#table').mouseover(function() {
+	$('table').mouseover(function() {
 		
 		var color = "rgb(";
         //this for loop makes a random RGB color when the mouse
