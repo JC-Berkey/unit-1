@@ -1,8 +1,3 @@
-//initialize function called when the script loads
-function initialize(){
-    cities();
-};
-
 //function to create a table with cities and their populations
 function cities(){
     //define two arrays for cities and population
@@ -41,6 +36,8 @@ function cities(){
         //add the row's html string to the table
         $("table").append(rowHtml);
     };
+    addColumns(cityPop);
+    addEvents();
 };
 // this function adds the City Size Column
 function addColumns(cityPop){
@@ -90,7 +87,7 @@ function addEvents(){
 			}
 		}
         //adds the color to the css style
-		$(this).css('color', color);
+        document.querySelector("table").style.color = color;
 	});
     //function to alert if mouse is clicked
 	function clickme(){
@@ -102,4 +99,4 @@ function addEvents(){
 };
 
 //call the initialize function when the window has loaded
-$(document).ready(initialize);
+$(document).ready(cities);
